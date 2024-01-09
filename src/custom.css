@@ -1,0 +1,20 @@
+body {
+    height: 500vh;
+}
+
+.change-bg-color-scroll {
+    animation: change-bg-color linear forwards;
+    animation-timeline: scroll(root);
+}
+
+@keyframes change-bg-color {
+    0% {
+        background-color: hsl(240, 5%, 84%);
+    }
+    5% {
+        background-color: hsl(0, 0%, 98%);
+    }
+    100% {
+        background-color: hsl(0, 0%, 98%);
+    }
+}
