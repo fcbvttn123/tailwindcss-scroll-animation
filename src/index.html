@@ -6,9 +6,22 @@
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
 </head>
-<body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+<body class="overflow-x-hidden">
+    <header class="lg:flex lg:items-stretch min-h-screen overflow-hidden">
+        <div class="lg:basis-2/4">
+            <div class="flex items-center justify-between px-14 pt-10">
+                <a class="text-4xl font-extrabold text-green-700" href="#">Logical</a>
+                <div class="w-14"><img class="w-full h-full object-cover" src="./images/sparkler.png" alt="" srcset=""></div>
+            </div>
+            <h1 class="text-6xl font-semibold text-center mt-10 px-14">Build Better Backends</h1>
+            <p class="text-2xl text-center mt-7 px-14">The only platform that gives AI the ability to autonomously build web services.</p>
+        </div>
+        <div class="hidden lg:block basis-2/4 bg-gray-500 relative isolate">
+            <img class="absolute -bottom-7 -right-5 z-20" src="./images/input-type.png" alt="" srcset="">
+            <img class="absolute -bottom-32 left-16 rounded-lg z-30" src="./images/new-collection.png" alt="" srcset="">
+            <img class="absolute -top-2 -right-5 rounded-lg" src="./images/no-conflict.png" alt="" srcset="">
+            <img class="absolute top-2/4 -left-5 -translate-y-1/2 rounded-lg z-10" src="./images/production.png" alt="" srcset="">
+        </div>
+    </header>
 </body>
 </html>
