@@ -7,6 +7,33 @@ body {
     animation-timeline: scroll(root);
 }
 
+.scale-20-percent-smaller-animation {
+    --dynamic-scale: calc((max(20, min(var(--scroll), 40)) - 20) * .2 / 20);
+    transform: scale(calc(var(--dynamic-scale) * -1 + 1));
+    /* 
+    
+        (oldVal - oldMin) * newRange / oldRange + newMin
+    
+        ( max(20, min(var(--scroll), 40)) - 20) * .2 / 20 + newMin
+    
+        oldVal --> (20% - 40%) --> max(20, min(var(--scroll), 40))
+    
+        oldMin --> (20% - 40%) --> 20
+    
+        newRange --> from 1 to .8 --> .2
+        
+        oldRange --> from 20% to 40% --> 20
+    
+    */
+    --dynamic-color: calc((max(20, min(var(--scroll), 40)) - 20) * 29 / 20);
+    color: hsl(142, 72%, calc(var(--dynamic-color) * -1% + 29%));
+}
+
+.continuous-rotate-animation {
+    --dynamic-rotate: calc((max(20, min(var(--scroll), 40)) - 20) * 360 / 20);
+    transform: rotate(calc(var(--dynamic-color) * 1deg + 1deg));
+}
+
 @keyframes change-bg-color {
     0% {
         background-color: hsl(240, 5%, 84%);
